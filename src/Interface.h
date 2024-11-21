@@ -47,7 +47,7 @@ public:
 
         // Quando atingir 00:00:00, o alarme toca
         std::cout << "Alarme tocando! Alarme acionado!" << std::endl;
-        alarmTriggered = true; /
+        alarmTriggered = true; 
     }
 };
 
