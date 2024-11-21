@@ -1,7 +1,81 @@
+/*! ****************************************************************************
+ * @copyright   Miguel Grimm <miguelgrimm@gmail>
+ *
+ * @brief       Classe concreta de aritmética do comparador de magnitude.
+ *
+ * @file        Compare.h
+ * @version     1.0
+ * @date        27 Julho 2021
+ *
+ * @section     HARDWARES & SOFTWARES.
+ *              +compiler     GDB online - C++ 17
+ *              +revisions    Versão (data): Descrição breve.
+ *                            ++ 1.0 (27 Julho 2021): Versão inicial.
+ *
+ * @section     AUTHORS & DEVELOPERS.
+ *              +institution  UFAM - Universidade Federal do Amazonas.
+ *              +courses      Engenharia da Computação / Engenharia Elétrica.
+ *              +teacher      Miguel Grimm <miguelgrimm@gmail.com>
+ *
+ *                            Compilação e Depuração:
+ *                            +teacher	  Miguel Grimm <miguelgrimm@gmail.com>
+ *
+ * @section     LICENSE
+ *
+ *              GNU General Public License (GNU GPL).
+ *
+ *              Este programa é um software livre; Você pode redistribuí-lo
+ *              e/ou modificá-lo de acordo com os termos do "GNU General Public
+ *              License" como publicado pela Free Software Foundation; Seja a
+ *              versão 3 da licença, ou qualquer outra versão posterior.
+ *
+ *              Este programa é distribuído na esperança de que seja útil,
+ *              mas SEM QUALQUER GARANTIA; Sem a garantia implícita de
+ *              COMERCIALIZAÇÃO OU USO PARA UM DETERMINADO PROPÓSITO.
+ *              Veja o site da "GNU General Public License" para mais detalhes.
+ *
+ * @htmlonly    http://www.gnu.org/copyleft/gpl.html
+ *
+ * @section     REFERENCES.
+ *              + NASCIMENTO, Miguel G. do. Anotações de aula da disciplina de
+ *                Arquitetura de Sistemas Digitais. Ufam, 2021.
+ *              + NASCIMENTO, Miguel G. do. AnotaC'C5es de aula da disciplina de
+ *                Eletrônica Digital II. Ufam, 2021.
+ * *****************************************************************************
+ */
+
+
 #ifndef C__USERS_MIGUELGRIMM_DESKTOP_CPPLINT_MASTER_COMPARE_H_
 #define C__USERS_MIGUELGRIMM_DESKTOP_CPPLINT_MASTER_COMPARE_H_
+
+
 #include "Flow.h"
 
+
+/*! ----------------------------------------------------------------------------
+ *  @brief    A classe implementa o comparador de magnitude.
+ *
+ *  @use      Sequência de uso dos serviços da classe.
+ *
+ *            ++ Compare   cmp (dataBitSize);
+ *
+ *            ++ cmp.setEnable (enable);
+ *            ++ cmp.setDataA (dataA);
+ *            ++ cmp.setDataB (dataB);
+ *            ++ active = cmp.getActive ();
+ *
+ *            ++ cmp.doCompare ();
+ *
+ *            ++ gleOut = cmp.getGreastLessEqualOut ();
+ *
+ *            ++ gt = cmp.getGreastThen ();
+ *            ++ ge = cmp.getGreastOrEqual ();
+ *            ++ lt = cmp.getLessThen ();
+ *            ++ le = cmp.getLessOrEqual ();
+ *            ++ eq = cmp.getEqual ();
+ *            ++ ne = cmp.getNotEqual ();
+ * -----------------------------------------------------------------------------
+ */
 class Compare : public Flow
 {
 
@@ -15,6 +89,11 @@ public:
     gleOut = 0;
   }
 
+
+  /*! --------------------------------------------------------------------------
+   *  @brief       Realiza a operação de comparação dos dados e casteamento.
+   *  --------------------------------------------------------------------------
+   */
   void doArithmetic () {
 
     if ((enable == 1)  && (active == 1))

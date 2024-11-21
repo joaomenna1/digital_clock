@@ -9,12 +9,13 @@ public:
     int alarmMinutes = 0;
 
     void setAlarm(int h, int m) {
-        alarmHours = h % 24;       // Garante que as horas estejam no intervalo
-        alarmMinutes = m % 60;     // Garante que os minutos estejam no intervalo
+        alarmHours = h % 24;     
+        alarmMinutes = m % 60;     
     }
 
     void displayAlarm() const {
-        std::cout << "Despertador - Horas: " << alarmHours << " Minutos: " << alarmMinutes << std::endl;
+        std::cout << "Despertador - Horas: " << alarmHours
+                  << " Minutos: " << alarmMinutes << std::endl;
     }
 };
 
